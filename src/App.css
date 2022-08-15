@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  background-color: #fff;
 }
 
 .App-logo {
@@ -14,18 +14,25 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(36, 34, 34);
+  text-align: left;
+  margin-left: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.footer {
+  background: #17023c;
+  color: #efb810;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes App-logo-spin {
