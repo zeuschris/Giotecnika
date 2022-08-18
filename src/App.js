@@ -1,16 +1,13 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Header} from './components/Header';
+import {Footer} from './components/Footer';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-          <h1>Giotecnika</h1>
-      </header>
-      <footer>
-        <div className='footer'>
-          <p>Libreria Giotecnika 2022</p>
-        </div>
-      </footer>
+    <div> 
+      <Header/>
+      <Footer/>
     </div>
   );
 }
