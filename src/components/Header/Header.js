@@ -1,4 +1,5 @@
-import image from '../assets/logo.png';
+import image from '../../assets/logo.png';
+import './Header.scss'
 export const Header = () => {
     return (
         <header className="header">

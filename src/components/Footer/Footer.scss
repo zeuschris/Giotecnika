@@ -1,0 +1,37 @@
+.footer {
+    background: #17023c;
+    color: #efb810;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 70px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+        p{
+            font-family: monospace;
+        }
+  }
+
+
+ion-icon{
+    color: rgb(223, 45, 45);
+    vertical-align: middle;
+    font-size: 20px;
+    position: relative;
+    left: 10px;
+    transition: .2s all;
+    user-select: none;
+        &:hover{
+            color: #efb810;
+        }
+}
+
+::selection{
+    color: #fff;
+    background-color: rgb(97, 64, 22);
+  }
+  
