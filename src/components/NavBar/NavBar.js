@@ -2,7 +2,7 @@ import { CartWidget } from "./CartWidget";
 
 const Navbar = () => {
     return(
-        <CartWidget></CartWidget>
+        <CartWidget/>
     )
 }
 
