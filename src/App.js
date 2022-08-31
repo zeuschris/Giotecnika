@@ -12,8 +12,8 @@ const App = () => {
     <div> 
       <Header/>
       <Navbar/>
-      <ItemListContainer title = 'Mochila Jansport' price={200} shipping={15}/>
-      <Count stock = {6} initial = {1}/>
+      <ItemListContainer/>
+      <Count/>
       <Footer/>
     </div>
   );

@@ -1,16 +1,27 @@
 import './ItemListContainer.scss'
-import image from '../../assets/mochila.jpg'
+import lookItems from '../../helpers/lookItems'
+import { useEffect, useState } from 'react'
+import ItemList from '../ItemList/ItemList'
 
-const ItemListContainer = (props) => {
-    const {title,price,shipping} = props
-    return(
-        <div className="items">
-            <h1>{title}</h1>
-            <div className='items-card'>
-            <p>Precio: ${price}</p>
-            <p>Envio: ${shipping}</p>
-            <img src={image} className='image-products' alt='Mochila Jansport'/>
-            </div>
+const ItemListContainer = () => {
+
+    const [stock, setStock] = useState([])
+
+    console.log(stock)
+
+useEffect(() => {
+    lookItems()
+        .then((data) => {
+        setStock(data)
+    })
+        .catch((error) => {
+        console.log(error)
+        })
+}, [])
+
+    return (
+        <div>
+            <ItemList productos = {stock}/>
         </div>
     )
 }

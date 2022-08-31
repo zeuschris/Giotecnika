@@ -36,7 +36,6 @@ export const Count = (props) => {
     }
 }
 
-
     return(
         <div>
                 <button onClick={handleRest} className='btn btn-danger boton'>-</button>
@@ -47,3 +46,4 @@ export const Count = (props) => {
         </div>
     )
 }
+

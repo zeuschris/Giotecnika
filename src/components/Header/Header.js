@@ -8,7 +8,6 @@ export const Header = () => {
                 <img src={image} className='logo' alt='logo'></img>
             </a>
             <input type='search' placeholder='Busca un producto' className='form-control search'></input>
-            <input type='submit' value='Buscar' className='btn btn-danger btn-search'></input>
             </div>
           <nav>
                 <ul className="menu">
@@ -18,6 +17,9 @@ export const Header = () => {
                     <a href="/#" rel="noopener noreferrer"><li>Iniciar Sesión</li></a> 
                 </ul>
           </nav>
+            <main>
+                <h1 className='main-title'>Productos</h1>
+            </main>
         </header>
     )
 }

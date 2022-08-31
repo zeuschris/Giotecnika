@@ -1,3 +1,13 @@
+.container-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    .main-title{
+        position: relative;
+        text-align: center;
+    }
+}
 .items{
     text-align: center;
     width: 300px;
@@ -25,8 +35,8 @@
     }
     .image-products{
         position: absolute;
-        top: -350px;
-        left: 45%;
+        bottom: 180px;
+        left: 15%;
         height: 250px;
         width: 200px;
         z-index: 1;
