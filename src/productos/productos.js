@@ -1,5 +1,6 @@
 import mochila from '../assets/mochila.jpg'
 import boligrafo from '../assets/boligrafo-parker.png'
+import marilyn from '../assets/marilyn.jpg.crdownload'
 
 const Productos = [
     
@@ -19,6 +20,15 @@ const Productos = [
         descript : 'Con adornos y clip de color dorado',
         stock : 10,
         shipping : 15
+    },
+
+    {   id : 3,
+        img : marilyn,
+        name : 'Cuadro de Marilyn Monroe',
+        price : 12500,
+        descript : 'Para colgar sobre una cama o sillón',
+        stock : 10,
+        shipping : 45
     }
     
     ]
