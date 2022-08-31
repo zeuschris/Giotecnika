@@ -1,6 +1,6 @@
 import mochila from '../assets/mochila.jpeg'
 import boligrafo from '../assets/boligrafo-parker.png'
-import marilyn from '../assets/marilyn.jpg.crdownload'
+import audrey from '../assets/audrey.jpg'
 
 const Productos = [
     
@@ -22,13 +22,13 @@ const Productos = [
         shipping : 15
     },
 
-    {   id : 3,
-        img : marilyn,
-        name : 'Cuadro de Marilyn',
-        price : 12500,
+    {   id : 4,
+        img : audrey,
+        name : 'Cuadro de Audrey',
+        price : 17500,
         descript : 'Para colgar sobre una cama o sillón',
         stock : 10,
-        shipping : 45
+        shipping : 25
     }
     
     ]
