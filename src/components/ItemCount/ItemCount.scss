@@ -1,24 +1,18 @@
-.number{
-    font-size: 30px;
-    vertical-align: middle;
-}
-
 .boton{
     width: 50px;
     position: relative;
-    left: 7.3%;
-    bottom: 220px;
     border-radius: 30px;
+    bottom: 185px;
+    left: 30%;
+    .number{
+        font-size: 20px;
+        vertical-align: middle;
+    }
 }
 
 .btn-carrito{
-    position: relative;
-    bottom: 50px;
+    position: absolute;
+    bottom: -50px;
+    right: 22%;
 }
 
-.modal{
-    height: 200px;
-    width: 200px;
-    background: #000;
-    opacity: .5;
-}

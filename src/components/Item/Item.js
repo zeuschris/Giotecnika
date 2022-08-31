@@ -1,3 +1,5 @@
+import { Count } from "../ItemCount/ItemCount"
+
 const Item = ({items}) => {
     return (
         <div className='items'>
@@ -8,6 +10,7 @@ const Item = ({items}) => {
                 <p>Envio: ${items.shipping}</p>
                 <p>Stock: {items.stock}</p>
                 <img src={items.img} alt={items.name} className='image-products'></img>
+                <Count initial = {1} stock = {10}/>
             </div>
         </div>
     )

@@ -8,7 +8,7 @@ const Productos = [
         name : 'mochila jeansport',
         price : 10000,
         descript : 'Una mochila diseñada para resistirlo todo',
-        stock : 7,
+        stock : 10,
         shipping : 15 
     },
     
@@ -17,7 +17,7 @@ const Productos = [
         name : 'Boligrafo Parker',
         price : 9500,
         descript : 'Con adornos y clip de color dorado',
-        stock : 25,
+        stock : 10,
         shipping : 15
     }
     

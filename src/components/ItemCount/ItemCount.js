@@ -24,7 +24,7 @@ export const Count = (props) => {
 
     const onAdd = () => {
         if ( counter < stock ) {
-            toast.success(`Se añadio ${counter} mochila jansport al carrito`, {
+            toast.success(`Se añadio ${counter} producto al carrito`, {
                 position: "bottom-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -41,7 +41,7 @@ export const Count = (props) => {
                 <button onClick={handleRest} className='btn btn-danger boton'>-</button>
                 <span className="number boton">{counter}</span>
                 <button onClick={handleAdd} className='btn btn-danger boton'>+</button>
-                <button onClick={onAdd} className= {counter <= stock ? 'btn btn-primary btn-carrito' : 'btn btn-primary disabled btn-carrito'} >Agregar al carrito</button>
+                <button onClick={onAdd} className= {counter <= stock ? 'btn btn-primary btn-carrito' : 'btn disabled btn-carrito'} >Agregar al carrito</button>
                 <ToastContainer/>
         </div>
     )

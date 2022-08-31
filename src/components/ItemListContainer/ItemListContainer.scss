@@ -3,6 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
+    position: relative;
     .main-title{
         position: relative;
         text-align: center;
@@ -12,7 +13,7 @@
     text-align: center;
     width: 300px;
     background: rgb(210, 192, 192);
-    height: 550px;
+    height: 570px;
     margin-left: 50px;
     position: relative;
     border-radius: 20px;
@@ -30,14 +31,14 @@
         font-family: sans-serif;
         p{
             position: relative;
-            top: 20px;
+            top: 45px;
         }
     }
     .image-products{
         position: absolute;
-        bottom: 180px;
+        bottom: 230px;
         left: 15%;
-        height: 250px;
+        height: 230px;
         width: 200px;
         z-index: 1;
         border-radius: 10px;
