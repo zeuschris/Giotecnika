@@ -1,4 +1,4 @@
-import mochila from '../assets/mochila.jpg'
+import mochila from '../assets/mochila.jpeg'
 import boligrafo from '../assets/boligrafo-parker.png'
 import marilyn from '../assets/marilyn.jpg.crdownload'
 
@@ -24,7 +24,7 @@ const Productos = [
 
     {   id : 3,
         img : marilyn,
-        name : 'Cuadro de Marilyn Monroe',
+        name : 'Cuadro de Marilyn',
         price : 12500,
         descript : 'Para colgar sobre una cama o sillón',
         stock : 10,
