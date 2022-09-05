@@ -1,6 +1,8 @@
 import { Count } from "../ItemCount/ItemCount"
+import { Link } from 'react-router-dom'
 
 const Item = ({items}) => {
+
     return (
         <div className='items'>
             <h1>{items.name}</h1>
@@ -10,6 +12,7 @@ const Item = ({items}) => {
                 <p>Envio: ${items.shipping}</p>
                 <p>Stock: {items.stock}</p>
                 <img src={items.img} alt={items.name} className='image-products'></img>
+                <Link to={`/item/${items.id}`} className="btn btn-primary">Ver más</Link>
                 <Count initial = {1} stock = {10}/>
             </div>
         </div>
