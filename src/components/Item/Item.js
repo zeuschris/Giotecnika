@@ -9,9 +9,8 @@ const Item = ({items}) => {
             <div className='items-card'>
                 <p>Descripción: {items.descript}</p>
                 <p>Precio: ${items.price}</p>
-                <p>Envio: ${items.shipping}</p>
                 <img src={items.img} alt={items.name} className='image-products'></img>
-                <Link to={`/item/${items.id}`} className="btn btn-primary d-flex justify-content-center">Ver más</Link>
+                <Link to={`/item/${items.id}`} className="btn btn-primary d-flex justify-content-center mt-5">Ver más</Link>
                 <Count initial = {1} stock = {10}/>
             </div>
         </div>

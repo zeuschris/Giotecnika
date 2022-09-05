@@ -41,9 +41,10 @@ export const Count = (props) => {
                 <button onClick={handleRest} className='btn btn-danger boton'>-</button>
                 <span className="number boton">{counter}</span>
                 <button onClick={handleAdd} className='btn btn-danger boton'>+</button>
-                <button onClick={onAdd} className= {counter <= stock ? 'btn btn-primary btn-carrito' : 'btn disabled btn-carrito'} >Agregar al carrito</button>
                 <ToastContainer/>
         </div>
     )
 }
+
+
 
