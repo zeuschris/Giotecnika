@@ -1,4 +1,4 @@
-import { Count } from "../ItemCount/ItemCount"
+import { Count } from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 
 const Item = ({items}) => {

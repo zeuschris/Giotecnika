@@ -1,7 +1,7 @@
 .bg-detail{
     background: linear-gradient(#000, rgb(46, 45, 45));
     width: 30%;
-    height: 450px;
+    height: 520px;
     margin: 25px;
     border-radius: 25px;
     color: #fff;
@@ -10,11 +10,24 @@
     h1{
         text-align: center;
         text-shadow: 0 0 5px #fff;
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
     p{
         margin: 10px;
         padding: 5px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    span{
+        color: rgb(160, 171, 235);
+        text-shadow: 0 0 3px;
+    }
+
+    .talle{
+        background: rgb(67, 63, 63);
+        border-radius: 10%;
+        display: inline-block;
     }
 
     .back{

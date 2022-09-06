@@ -13,6 +13,7 @@ const Productos = [
         gender : 'Unisex',
         material : '100% Poliéster',
         warranty : 'Contra defecto de fabricación',
+        talle : 'Único',
         stock : 10,
         shipping : 'Gratis' 
     },
