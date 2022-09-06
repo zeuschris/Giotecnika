@@ -15,7 +15,7 @@ const Productos = [
         warranty : 'Contra defecto de fabricación',
         talle : 'Único',
         stock : 10,
-        shipping : 'Gratis' 
+        shippingFree : 'Gratis' 
     },
     
     {   id : 2,
@@ -24,10 +24,11 @@ const Productos = [
         price : 9500,
         descript : 'Con adornos y clip de color dorado',
         category : 'Boligrafos',
-        gender : 'Male',
-        warranty : '',
+        gender : 'Hombre',
+        warranty : '1 Mes',
+        case : 'Si',
         stock : 10,
-        shipping : 15
+        shipping : 225
     },
 
     {   id : 3,
@@ -39,7 +40,7 @@ const Productos = [
         gender : 'Unisex',
         warranty : '',
         stock : 10,
-        shipping : 25
+        shipping : 400
     }
     
     ]

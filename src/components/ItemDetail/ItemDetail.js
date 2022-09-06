@@ -3,6 +3,8 @@ import { Count } from "../ItemCount/ItemCount"
 import './ItemDetail.scss'
 
 
+
+
     const ItemDetail = ({prod}) => {
 
         return (
@@ -13,11 +15,8 @@ import './ItemDetail.scss'
                 <p>Material: {prod.material}</p>
                 <p>Garantia: {prod.warranty}</p>
                 <p>Stock: {prod.stock}</p>
-                <p className='talle'>Talle: {prod.talle}</p>
-                <p>Envio: <span>
-                            {prod.shipping}
-                          </span>
-                </p>
+                <p className='talle'>{prod.talle ? `Talle: ${prod.talle}` : `Estuche: ${prod.case}`}</p>
+                <p><span>{prod.shipping ? `Envio: $${prod.shipping}` : `Envio: ${prod.shippingFree}`}</span></p>
                 <Link to='/' className="btn btn-warning back">Atras</Link>
                 <div className='flex-container'>
                 <button onClick={Count.onAdd}
