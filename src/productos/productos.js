@@ -6,12 +6,15 @@ const Productos = [
     
     {   id: 1,
         img : mochila,
-        name : 'mochila jeansport',
+        name : 'Mochila Jeansport',
         price : 10000,
         descript : 'Una mochila diseñada para resistirlo todo',
-        category : 'mochilas',
+        category : 'Mochilas',
+        gender : 'Unisex',
+        material : '100% Poliéster',
+        warranty : 'Contra defecto de fabricación',
         stock : 10,
-        shipping : 15 
+        shipping : 'Gratis' 
     },
     
     {   id : 2,
@@ -19,7 +22,9 @@ const Productos = [
         name : 'Boligrafo Parker',
         price : 9500,
         descript : 'Con adornos y clip de color dorado',
-        category : 'boligrafos',
+        category : 'Boligrafos',
+        gender : 'Male',
+        warranty : '',
         stock : 10,
         shipping : 15
     },
@@ -29,7 +34,9 @@ const Productos = [
         name : 'Cuadro de Audrey',
         price : 17500,
         descript : 'Para colgar sobre una cama o sillón',
-        category : 'cuadros',
+        category : 'Cuadros',
+        gender : 'Unisex',
+        warranty : '',
         stock : 10,
         shipping : 25
     }
