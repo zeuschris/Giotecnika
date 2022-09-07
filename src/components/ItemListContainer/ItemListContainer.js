@@ -34,7 +34,7 @@ useEffect(() => {
         <div>
             {
                 loading ?
-                <h2>Cargando...</h2>
+                <div className='loader'/>
                 :
                 <ItemList productos = {stock}/>
             }

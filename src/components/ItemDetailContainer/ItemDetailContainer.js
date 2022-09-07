@@ -28,9 +28,12 @@ import { useParams } from 'react-router-dom'
 
         return (    
             <div>
-                        {
-                            loading ? <h2>Cargando...</h2>  : <ItemDetail prod = {product}/>
-                        }
+            {
+                loading ?
+                <div className='loader'/>
+                :
+                <ItemDetail prod = {product}/>
+            }
             </div>
         )
     }
