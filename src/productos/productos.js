@@ -38,7 +38,8 @@ const Productos = [
         descript : 'Cuadro Breakfast at Tiffany\'s Audrey Hepburn',
         category : 'Cuadros',
         gender : 'Unisex',
-        warranty : '',
+        warranty : 'Sin garantia',
+        case : 'Negro',
         stock : 10,
         shipping : 400
     }

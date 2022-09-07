@@ -5,8 +5,11 @@
     margin: 25px;
     border-radius: 25px;
     color: #fff;
-    outline: 2px solid rgb(247, 164, 20);
+    outline: 2px solid #efb810;
+    box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.773);
     user-select: none;
+    position:relative;
+    z-index: 1;
 
     h1{
         text-align: center;
@@ -41,3 +44,20 @@
         justify-content: center;
     }
 }
+
+@mixin image-items {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 1px;
+    border-radius: 25px;
+    opacity: .4;
+    z-index: -1;
+    border-radius: 25px;
+    user-select: none;
+}
+
+.image-products-detail{
+    @include image-items()
+}    
+

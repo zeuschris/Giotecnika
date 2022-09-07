@@ -7,6 +7,7 @@ import './ItemDetail.scss'
         return (
                 <div className="bg-detail">
                     <h1>{prod.name}</h1>
+                    <img src = {prod.img} alt={prod.name} className='image-products-detail'/>
                     <p>Categoria: {prod.category}</p>
                     <p>Genero: {prod.gender}</p>
                     <p>Material: {prod.material}</p>

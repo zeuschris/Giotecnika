@@ -38,7 +38,8 @@
             color: #fff;
         }
     }
-    .image-products{
+
+    @mixin image-items {
         position: absolute;
         bottom: 210px;
         left: 15%;
@@ -48,6 +49,10 @@
         border-radius: 15px;
         user-select: none;
         border: 1px solid rgba(230, 141, 17, 0.935);
+    }
+
+   .image-products{
+        @include image-items()
     }    
 }
 
