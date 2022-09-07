@@ -1,5 +1,6 @@
 import { Count } from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
+import './Item.scss'
 
 const Item = ({items}) => {
 
@@ -10,7 +11,9 @@ const Item = ({items}) => {
                 <p>Descripción: {items.descript}</p>
                 <p>Precio: ${items.price}</p>
                 <img src={items.img} alt={items.name} className='image-products'></img>
-                <Link to={`/item/${items.id}`} className="btn btn-primary d-flex justify-content-center mt-5">Ver más</Link>
+                <div className='container-lookme'>
+                <Link to={`/item/${items.id}`} className="btn btn-primary d-flex justify-content-center lookme">Ver más</Link>
+                </div>
                 <Count initial = {1} stock = {10}/>
             </div>
         </div>
