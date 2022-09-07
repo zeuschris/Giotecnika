@@ -1,3 +1,3 @@
 # Giotecnika Web
 
-![](interface.gif)
+![Interface de los items](/Interface.gif)
