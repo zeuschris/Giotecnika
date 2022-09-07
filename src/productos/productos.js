@@ -35,7 +35,7 @@ const Productos = [
         img : audrey,
         name : 'Cuadro de Audrey',
         price : 17500,
-        descript : 'Para colgar sobre una cama o sillón',
+        descript : 'Cuadro Breakfast at Tiffany\'s Audrey Hepburn',
         category : 'Cuadros',
         gender : 'Unisex',
         warranty : '',
