@@ -1,3 +1,3 @@
 # Giotecnika Web
 
-![](/Interface.gif)
+![](/gif/Interface.gif)
