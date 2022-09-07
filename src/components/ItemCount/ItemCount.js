@@ -38,9 +38,9 @@ export const Count = (props) => {
 
     return(
         <div>
-                <button onClick={handleRest} className='btn btn-danger boton'>-</button>
+                <button onClick={handleRest} className='btn btn-outline-warning boton'>-</button>
                 <span className="number boton">{counter}</span>
-                <button onClick={handleAdd} className='btn btn-danger boton'>+</button>
+                <button onClick={handleAdd} className='btn btn-outline-warning boton'>+</button>
                 <ToastContainer/>
         </div>
     )

@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
     const ItemDetailContainer = () => {
         
         const [product,setProduct] = useState([])
+        const [loading,setLoading] = useState(true)
 
         const {itemID} = useParams()
 
@@ -14,16 +15,22 @@ import { useParams } from 'react-router-dom'
         console.log(product)
 
         useEffect(() => {
+            setLoading(true)
             lookItems()
                 .then((resp) => {
                     setProduct(resp.find((element) => element.id === Number(itemID)))
                 })
                 .catch((error) => console.log(error))
+                .finally(() => {
+                    setLoading(false)
+                })
         },[])
 
         return (    
             <div>
-                        <ItemDetail prod = {product}/>
+                        {
+                            loading ? <h2>Cargando...</h2>  : <ItemDetail prod = {product}/>
+                        }
             </div>
         )
     }

@@ -1,36 +1,27 @@
 .header {
     text-align: center;
-    font-size: 20px;
-    background-color: #17023c2a;
+    background-color: #39197189;
     color: rgb(36, 34, 34);
     text-transform: uppercase;
     height: 200px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
   }
 
+  body{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 1000px;
+    position: relative;
+  }
   
 .menu{
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    list-style-type: none;
-    a{
-        text-decoration: none;
-        background-color: #17023c;
-        color: #fff;
-        font-size: 20px;
-        width: 200px;
-        padding: 7px;
-        position: relative;
-        bottom: 65px;
+        color: #17023c;
+        font-size: 17px;
         transition: .2s all;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         user-select: none;
-        &:hover{
-            color: #efb810;
-            background-color: #000;
-        }
-     }
+        position: relative;
+        bottom: 25px;
   }
   
   
@@ -40,7 +31,7 @@
     display: inline-block;
     position: relative;
     right: 43%;
-    bottom: 10px;
+    top: 20px;
     user-select: none;
   }
 
@@ -63,6 +54,7 @@
 
 .main-title{
   position:relative;
+  display: inline-block;
   bottom: 80px;
   font-size: 40px;
   font-family: cursive;

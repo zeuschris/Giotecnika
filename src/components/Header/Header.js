@@ -1,5 +1,13 @@
 import image from '../../assets/logo.png';
 import './Header.scss'
+// Bootstrap 
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 export const Header = () => {
     return (
         <header className="header">
@@ -7,16 +15,43 @@ export const Header = () => {
             <a href='/#' rel="noopener noreferrer">
                 <img src={image} className='logo' alt='logo'></img>
             </a>
-            <input type='search' placeholder='Busca un producto' className='form-control search'></input>
             </div>
-          <nav>
-                <ul className="menu">
-                    <a href="/#" rel="noopener noreferrer"><li>Inicio</li></a> 
-                    <a href="/#" rel="noopener noreferrer"><li>Contacto</li></a> 
-                    <a href="/#" rel="noopener noreferrer"><li>Crear Cuenta</li></a> 
-                    <a href="/#" rel="noopener noreferrer"><li>Iniciar Sesión</li></a> 
-                </ul>
-          </nav>
+            <Navbar bg="dark" variant="dark" expand="lg" className="menu">
+      <Container fluid>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >
+            <Nav.Link href="#action1">Inicio</Nav.Link>
+            <Nav.Link href="#action2">Contacto</Nav.Link>
+            <NavDropdown title="Categorias" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Mochilas</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">
+                Boligrafos
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action5">
+                Cuadros
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#">
+              Nosotros
+            </Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Buscar..."
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-warning">Search</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
             <main>
                 <h1 className='main-title'>Productos</h1>
             </main>
