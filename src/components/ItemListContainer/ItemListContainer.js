@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom'
 const ItemListContainer = () => {
 
     const [stock, setStock] = useState([])
+    const [loading,setLoading] = useState(true)
     const {categoryID} = useParams()
     console.log(categoryID)
 
@@ -18,17 +19,25 @@ useEffect(() => {
             if(!categoryID) {
                 setStock(data)
             }else{
-                setStock(data.filter((element) => element.categoryID === categoryID))
+                setStock(data.filter((element) => element.category === categoryID))
             }
     })
         .catch((error) => {
         console.log(error)
         })
+        .finally(() => {
+            setLoading(false)
+        })
 }, [categoryID])
 
     return (
         <div>
-            <ItemList productos = {stock}/>
+            {
+                loading ?
+                <h2>Cargando...</h2>
+                :
+                <ItemList productos = {stock}/>
+            }
         </div>
     )
 }

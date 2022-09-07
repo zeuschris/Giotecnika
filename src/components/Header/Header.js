@@ -28,17 +28,11 @@ export const Header = () => {
             <Nav.Link href="#action1">Inicio</Nav.Link>
             <Nav.Link href="#action2">Contacto</Nav.Link>
             <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Mochilas</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Boligrafos
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action5">
-                Cuadros
-              </NavDropdown.Item>
+              <NavDropdown.Item href="/productos/mochilas">Mochilas</NavDropdown.Item>
+              <NavDropdown.Item href="/productos/boligrafos">Boligrafos</NavDropdown.Item>
+              <NavDropdown.Item href="/productos/cuadros">Cuadros</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#">
-              Nosotros
-            </Nav.Link>
+            <Nav.Link href="#">Nosotros</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
