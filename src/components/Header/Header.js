@@ -12,30 +12,30 @@ export const Header = () => {
     return (
         <header className="header">
             <div>
-            <a href='/#' rel="noopener noreferrer">
+                <a href='/#' rel="noopener noreferrer">
                 <img src={image} className='logo' alt='logo'></img>
-            </a>
+                </a>
             </div>
             <Navbar bg="dark" variant="dark" expand="lg" className="menu">
-      <Container fluid>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Nav.Link href="/#">Inicio</Nav.Link>
-            <Nav.Link href="#action2">Contacto</Nav.Link>
-            <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/productos/mochilas">Mochilas</NavDropdown.Item>
-              <NavDropdown.Item href="/productos/boligrafos">Boligrafos</NavDropdown.Item>
-              <NavDropdown.Item href="/productos/cuadros">Cuadros</NavDropdown.Item>
+              <Container fluid>
+                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Collapse id="navbarScroll">
+                <Nav
+                className="me-auto my-2 my-lg-0"
+                style={{ maxHeight: '100px' }}
+                navbarScroll
+                >
+                <Nav.Link href="/#">Inicio</Nav.Link>
+                <Nav.Link href="#action2">Contacto</Nav.Link>
+                <NavDropdown title="Categorias" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="/productos/mochilas">Mochilas</NavDropdown.Item>
+                <NavDropdown.Item href="/productos/boligrafos">Boligrafos</NavDropdown.Item>
+                <NavDropdown.Item href="/productos/cuadros">Cuadros</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#">Nosotros</Nav.Link>
-          </Nav>
-          <Form className="d-flex">
-            <Form.Control
+                <Nav.Link href="#">Nosotros</Nav.Link>
+            </Nav>
+              <Form className="d-flex">
+              <Form.Control
               type="search"
               placeholder="Buscar..."
               className="me-2"

@@ -37,5 +37,6 @@ import { useParams } from 'react-router-dom'
             </div>
         )
     }
+    
 
 export default ItemDetailContainer

@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Count } from "../ItemCount/ItemCount"
+import { Count } from '../ItemCount/ItemCount'
 import './ItemDetail.scss'
 
     const ItemDetail = ({prod}) => {
+
+        const [cantidad,setCantidad] = useState(1)
 
         return (
                 <div className="bg-detail">
@@ -17,7 +20,11 @@ import './ItemDetail.scss'
                     <p><span>{prod.shipping ? `Envio: $${prod.shipping}` : `Envio: ${prod.shippingFree}`}</span></p>
                     <Link to='/' className="btn btn-warning back">Atras</Link>
                 <div className='flex-container'>
-                    <button onClick={Count.onAdd} className= {Count.counter <= Count.stock ? 'btn btn-primary' : 'btn disabled'}>Agregar al carrito</button>
+                    <Count
+                       max = {prod.stock}
+                       counter = {cantidad}
+                       setCounter = {setCantidad}
+                    />
                 </div>
             </div>
         )

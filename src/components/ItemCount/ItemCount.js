@@ -3,17 +3,26 @@ import './ItemCount.scss'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const Count = (props) => {
+   export const Count = ({max,counter,setCounter}) => {
 
-    const {stock,initial} = props
-
-    const [counter,setCounter] = useState(initial)
+    const handleCart = () => {
+        if ( counter < max ) {
+        toast.success(`Se añadio ${counter} producto al carrito`, {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+}
 
     const handleAdd = () => {
         if (counter){
             setCounter(counter + 1)
         }
-       
     }
 
     const handleRest = () => {
@@ -22,29 +31,14 @@ export const Count = (props) => {
         }
     }
 
-    const onAdd = () => {
-        if ( counter < stock ) {
-            toast.success(`Se añadio ${counter} producto al carrito`, {
-                position: "bottom-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-        });
-    }
-}
-
     return(
-        <div>
+            <div>
                 <button onClick={handleRest} className='btn btn-outline-warning boton'>-</button>
                 <span className="number boton">{counter}</span>
                 <button onClick={handleAdd} className='btn btn-outline-warning boton'>+</button>
+                <button onClick={handleCart} className= {counter <= max ? 'btn btn-primary' : 'btn disabled'}>Agregar al carrito</button>
                 <ToastContainer/>
-        </div>
-    )
-}
-
-
+            </div>
+        )
+    }
 

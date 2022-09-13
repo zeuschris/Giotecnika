@@ -1,4 +1,3 @@
-import { Count } from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import './Item.scss'
 
@@ -14,7 +13,6 @@ const Item = ({items}) => {
                 <div className='container-lookme'>
                 <Link to={`/item/${items.id}`} className="btn btn-primary d-flex justify-content-center lookme">Ver más</Link>
                 </div>
-                <Count initial = {1} stock = {10}/>
             </div>
         </div>
     )
