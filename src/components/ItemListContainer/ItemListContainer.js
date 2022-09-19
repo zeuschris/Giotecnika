@@ -9,9 +9,6 @@ const ItemListContainer = () => {
     const [stock, setStock] = useState([])
     const [loading,setLoading] = useState(true)
     const {categoryID} = useParams()
-    console.log(categoryID)
-
-    console.log(stock)
 
 useEffect(() => {
     lookItems()
