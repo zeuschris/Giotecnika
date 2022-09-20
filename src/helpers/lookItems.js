@@ -1,8 +1,8 @@
-import Productos from "../productos/productos"
+import itemsRef from "../components/ItemListContainer/ItemListContainer"
 const lookItems = () => {
     return new Promise((resolve,reject) => {
         setTimeout(() => {
-            resolve(Productos)
+            resolve(itemsRef)
             reject('Promesa Rechazada')
         },2000)
     })

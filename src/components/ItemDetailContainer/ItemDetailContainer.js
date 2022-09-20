@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import lookItems from "../../helpers/lookItems";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from 'react-router-dom'
+import { doc,getDoc } from "firebase/firestore";
+import { db } from "../../firebase/fireconfig";
 
     const ItemDetailContainer = () => {
 
@@ -13,11 +14,14 @@ import { useParams } from 'react-router-dom'
 
         useEffect(() => {
             setLoading(true)
-            lookItems()
-                .then((resp) => {
-                    setProduct(resp.find((element) => element.id === Number(itemID)))
+            
+            // 1 - Armar la regerencia
+            const docRef = doc(db, 'items', itemID)
+            // 2 - Llamar a la DB
+            getDoc(docRef)
+                .then((doc) => {
+                    setProduct({id: doc.id, ...doc.data()})
                 })
-                .catch((error) => console.log(error))
                 .finally(() => {
                     setLoading(false)
                 })
