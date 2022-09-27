@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CartContext } from './Context/CartContext';
 import { Cart } from './components/Cart/Cart';
 import { useState } from 'react';
+import { Checkout } from './components/Checkout/Checkout';
 
 
 
@@ -24,11 +25,16 @@ const App = () => {
     return cart.find((item) => item.id === id)
   }
 
+  const cartQuantity = () => {
+    return cart.reduce((acc, item) => acc + item.cantidad, 0)
+  }
+
   return (
     <CartContext.Provider value = {{
       cart,
       addCart,
-      inCart
+      inCart,
+      cartQuantity
     }}>
       <BrowserRouter>
       <Header/>
@@ -39,6 +45,7 @@ const App = () => {
             <Route path='/item/:itemID' element = { <ItemDetailContainer/> }/>
             <Route path='/productos/:categoryID' element = { <ItemListContainer/> }/>
             <Route path='/cart' element = {<Cart/>}/>
+            <Route path='/checkout' element={<Checkout/>}/>
             <Route path='*' element = { <Navigate to="/"/>} />
 
       </Routes>

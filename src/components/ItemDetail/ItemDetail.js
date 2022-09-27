@@ -23,8 +23,8 @@ import './ItemDetail.scss'
                     cantidad : cantidad
                 }
                 inCart(prod.id)
-            addCart(prodInCart)
-            toast.success(`Se añadio ${cantidad} producto al carrito`, {
+                addCart(prodInCart)
+                toast.success(`Se añadio ${cantidad} producto al carrito`, {
                 position: "bottom-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -49,10 +49,10 @@ import './ItemDetail.scss'
                     <p className='talle'>{prod.talle ? `Talle: ${prod.talle}` : `Estuche: ${prod.case}`}</p>
                     <p><span>{prod.shipping ? `Envio: $${prod.shipping}` : `Envio: ${prod.shippingFree}`}</span></p>
                     <Link to='/' className="btn btn-warning back">Atras</Link>
-
+                    
                     {
                         inCart(prod.id) && <ToastContainer/>
-                    ?   <Link to="/cart" className='btn btn-success my-2'>Terminar mi compra</Link> 
+                    ?   <Link to="/cart" className='btn btn-success my-2'>Ir al carrito</Link> 
                     :   <Count
                             max = {prod.stock}
                             counter = {cantidad}

@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 import { CartContext } from "../../Context/CartContext"
 import './Cart.scss'
 
@@ -19,6 +20,7 @@ export const Cart = () => {
                 </div>
             ))
         }
+        <Link className="btn btn-primary" to='/checkout'>Terminar mi compra</Link>
         </div>
     )
 }

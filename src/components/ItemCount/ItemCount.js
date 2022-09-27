@@ -22,7 +22,7 @@ import 'react-toastify/dist/ReactToastify.css';
                 <button onClick={handleRest} className='btn btn-outline-warning boton'>-</button>
                 <span className="number boton">{counter}</span>
                 <button onClick={handleAdd} className='btn btn-outline-warning boton'>+</button>
-                <button onClick={handleCart} className= {counter <= max ? 'btn btn-primary' : 'btn disabled'}>Agregar al carrito</button>
+                <button onClick={handleCart} className = {counter <= max ? 'btn btn-primary' : 'btn disabled'}>Agregar al carrito</button>
             </div>
         )
     }
