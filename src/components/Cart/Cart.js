@@ -4,7 +4,7 @@ import { CartContext } from "../../Context/CartContext"
 import './Cart.scss'
 
 export const Cart = () => {
-    const {cart} = useContext(CartContext)
+    const {cart, cartTotal} = useContext(CartContext)
     return (
         <div className="container cart-container">
             <h1>Tu Carrito</h1>
@@ -20,6 +20,7 @@ export const Cart = () => {
                 </div>
             ))
         }
+        <h3>Total : ${cartTotal()}</h3>
         <Link className="btn btn-primary" to='/checkout'>Terminar mi compra</Link>
         </div>
     )
