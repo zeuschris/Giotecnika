@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import Swal from 'sweetalert2'
 
 export const CartContext = createContext()
 
@@ -22,13 +23,69 @@ export const CartProvider = ({children}) => {
         return cart.reduce((acc, item) => acc + item.cantidad * item.precio, 0)
     }
 
+    const removeItem = (id) => {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success',
+              cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: 'Estas seguro?',
+            text: "No podrás revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire(
+                  'Eliminado!',
+                  'Su producto ha sido eliminado.',
+                  'success',
+                  setCart(cart.filter((item) => item.id !== id))
+              )
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Cancelled',
+                'Your imaginary file is safe :)',
+                'error'
+              )
+            }
+          })
+    }
+
+    const emptyCart = () => {
+        Swal.fire({
+            title: 'Vaciar carrito?',
+            text: "No podras revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              setCart([])
+            }
+        })
+    }
+
     return (
         <CartContext.Provider value = {{
             cart,
             addCart,
             inCart,
             cartQuantity,
-            cartTotal
+            cartTotal,
+            emptyCart,
+            removeItem
           }}>
             {children}
         </CartContext.Provider>
