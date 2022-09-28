@@ -15,7 +15,7 @@ export const Cart = () => {
                     <h3>Nombre: {item.nombre}</h3>
                     <img src={item.imagen} alt={item.nombre}/>
                     <p>Precio: ${item.precio}</p>
-                    <p>Envio: ${item.shipping}</p>
+                    <p>Envio: ${item.envio || item.envioGratis}</p>
                     <small>Cantidad: {item.cantidad}</small>
                     <div>
                     <button onClick={() => removeItem(item.id)} className="btn btn-danger my-3"><AiFillDelete/></button>

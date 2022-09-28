@@ -20,6 +20,8 @@ import './ItemDetail.scss'
                     nombre : prod.name,
                     precio : prod.price,
                     imagen : prod.img,
+                    envio : prod.shipping,
+                    envioGratis : prod.shippingFree,
                     cantidad : cantidad
                 }
                 inCart(prod.id)
@@ -49,7 +51,7 @@ import './ItemDetail.scss'
                     <p className='talle'>{prod.talle ? `Talle: ${prod.talle}` : `Estuche: ${prod.case}`}</p>
                     <p><span>{prod.shipping ? `Envio: $${prod.shipping}` : `Envio: ${prod.shippingFree}`}</span></p>
                     <Link to='/' className="btn btn-warning back">Atras</Link>
-                    
+
                     {
                         inCart(prod.id) && <ToastContainer/>
                     ?   <Link to="/cart" className='btn btn-success my-2'>Ir al carrito</Link> 

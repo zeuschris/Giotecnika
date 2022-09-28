@@ -20,7 +20,7 @@ export const CartProvider = ({children}) => {
     }
 
     const cartTotal = () => {
-        return cart.reduce((acc, item) => acc + item.cantidad * item.precio, 0)
+        return cart.reduce((acc, item) => acc + item.cantidad * item.precio + item.envio, 0)
     }
 
     const removeItem = (id) => {
@@ -30,7 +30,7 @@ export const CartProvider = ({children}) => {
               cancelButton: 'btn btn-danger'
             },
             buttonsStyling: false
-          })
+        })
           
           swalWithBootstrapButtons.fire({
             title: 'Estas seguro?',
@@ -49,16 +49,16 @@ export const CartProvider = ({children}) => {
                   setCart(cart.filter((item) => item.id !== id))
               )
             } else if (
-              /* Read more about handling dismissals below */
+
               result.dismiss === Swal.DismissReason.cancel
             ) {
               swalWithBootstrapButtons.fire(
-                'Cancelled',
-                'Your imaginary file is safe :)',
+                'Cancelado',
+                'Tu producto está a salvo :)',
                 'error'
               )
             }
-          })
+        })
     }
 
     const emptyCart = () => {
