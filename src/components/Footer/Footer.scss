@@ -1,3 +1,10 @@
+body{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: auto;
+    position: relative;
+}
+
 .footer {
     background: #17023c;
     color: #efb810;
@@ -5,11 +12,12 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 0;
+    bottom: auto;
     width: 100vw;
-    height: 70px;
+    height: 79px;
     padding: 5px;
     display: flex;
+    margin: 100px 0;
     align-items: center;
         p{
             font-family: monospace;
