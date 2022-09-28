@@ -67,3 +67,10 @@ import './ItemDetail.scss'
     }
 
 export default ItemDetail
+
+
+
+
+
+
+

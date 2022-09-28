@@ -63,6 +63,36 @@
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.742);
 }
 
+.categorias{
+  span{
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 0.55);
+    transition: .2s all;
+    cursor: pointer;
+    &:hover{
+      color: rgba(255, 255, 255, 0.831);
+    }
+  }
+  &:hover{
+    background-color: #212529;
+    border: 1px solid #212529 ;
+  }
+}
+
+.link-a{
+  text-decoration: none;
+  color: #000;
+  &:hover{
+    color:#f3b20e;
+  }
+}
+
+.menu-a{
+  &:active{
+    background-color: #000;
+  }
+}
   
 // Scrollbar
 

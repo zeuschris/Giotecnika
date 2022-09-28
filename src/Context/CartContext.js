@@ -9,7 +9,7 @@ export const CartProvider = ({children}) => {
 
     const addCart = (prod) => {
         setCart ([...cart, prod])
-     }
+    }
 
     const inCart = (id) => {
         return cart.find((item) => item.id === id)
@@ -20,8 +20,9 @@ export const CartProvider = ({children}) => {
     }
 
     const cartTotal = () => {
-        return cart.reduce((acc, item) => acc + item.cantidad * item.precio + item.envio, 0)
+        return cart.reduce((acc, item) =>  acc + item.cantidad * item.precio + item.envio, 0)
     }
+
 
     const removeItem = (id) => {
         const swalWithBootstrapButtons = Swal.mixin({
@@ -56,10 +57,10 @@ export const CartProvider = ({children}) => {
                 'Cancelado',
                 'Tu producto está a salvo :)',
                 'error'
-              )
-            }
-        })
-    }
+            )
+        }
+    })
+}
 
     const emptyCart = () => {
         Swal.fire({
@@ -73,9 +74,9 @@ export const CartProvider = ({children}) => {
           }).then((result) => {
             if (result.isConfirmed) {
               setCart([])
-            }
-        })
-    }
+        }
+    })
+}
 
     return (
         <CartContext.Provider value = {{

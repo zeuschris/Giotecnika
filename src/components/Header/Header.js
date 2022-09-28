@@ -6,9 +6,19 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import DropdownToggle from 'react-bootstrap/esm/DropdownToggle';
+import { Dropdown } from 'react-bootstrap';
+import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
+import DropdownItem from 'react-bootstrap/esm/DropdownItem';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export const Header = () => {
+
+     const [dropdownOpen, setDropdownOpen] = useState(false)
+
+    const toggle = () => setDropdownOpen(!dropdownOpen)
+
     return (
         <header className="header">
             <div>
@@ -27,11 +37,16 @@ export const Header = () => {
                 >
                 <Nav.Link href="/#">Inicio</Nav.Link>
                 <Nav.Link href="#action2">Contacto</Nav.Link>
-                <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/productos/mochilas">Mochilas</NavDropdown.Item>
-                <NavDropdown.Item href="/productos/boligrafos">Boligrafos</NavDropdown.Item>
-                <NavDropdown.Item href="/productos/cuadros">Cuadros</NavDropdown.Item>
-            </NavDropdown>
+                <Dropdown wn='true' nav='true' isOpen={dropdownOpen} toggle={toggle}>
+                <DropdownToggle nav='true' caret='true' className='btn btn-dark categorias'>
+                <span>Categorias</span>
+                </DropdownToggle>
+                <DropdownMenu>
+                <DropdownItem enabled='true' className='menu-a'> <Link to='/productos/boligrafos' className='link-a'>Boligrafos</Link> </DropdownItem>
+                <DropdownItem enabled='true' className='menu-a'> <Link to='/productos/mochilas' className='link-a'>Mochilas</Link> </DropdownItem>
+                <DropdownItem enabled='true' className='menu-a'> <Link to='/productos/cuadros' className='link-a'>Cuadros</Link> </DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
                 <Nav.Link href="#">Nosotros</Nav.Link>
             </Nav>
               <Form className="d-flex">
@@ -52,5 +67,3 @@ export const Header = () => {
         </header>
     )
 }
-
-
