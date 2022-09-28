@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from './Context/CartContext';
 import { Cart } from './components/Cart/Cart';
 import { Checkout } from './components/Checkout/Checkout';
+import { DarkModeProvider } from './Context/DarkModeContext';
 
 
 
@@ -16,6 +17,7 @@ const App = () => {
 
   return (
     <CartProvider>
+        <DarkModeProvider>
 
       <BrowserRouter>
       <Header/>
@@ -33,6 +35,7 @@ const App = () => {
       <Footer/>
       </BrowserRouter>
 
+        </DarkModeProvider>
     </CartProvider>
   );
 }

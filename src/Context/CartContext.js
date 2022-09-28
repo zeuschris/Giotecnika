@@ -1,11 +1,13 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 import Swal from 'sweetalert2'
 
 export const CartContext = createContext()
 
+const init = JSON.parse(localStorage.getItem('carrito')) || []
+
 export const CartProvider = ({children}) => {
 
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(init)
 
     const addCart = (prod) => {
         setCart ([...cart, prod])
@@ -78,6 +80,10 @@ export const CartProvider = ({children}) => {
     })
 }
 
+  useEffect(() => {
+    localStorage.setItem('carrito', JSON.stringify(cart))
+  },[cart])
+
     return (
         <CartContext.Provider value = {{
             cart,
@@ -91,4 +97,8 @@ export const CartProvider = ({children}) => {
             {children}
         </CartContext.Provider>
     )
+}
+
+export const useCartContext = () => {
+    return useContext(CartContext)
 }

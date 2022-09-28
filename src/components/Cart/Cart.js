@@ -1,11 +1,13 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom"
-import { CartContext } from "../../Context/CartContext"
+import { CartContext, useCartContext } from "../../Context/CartContext"
 import {AiFillDelete} from 'react-icons/ai'
 import './Cart.scss'
+import { useDarkMode } from "../../Context/DarkModeContext"
 
 export const Cart = () => {
-    const {cart, cartTotal, emptyCart, removeItem} = useContext(CartContext)
+    const {cart, cartTotal, emptyCart, removeItem} = useCartContext()
+    const {darkMode} = useDarkMode()
     return (
         <div className="container cart-container">
             <h1>Tu Carrito</h1>
