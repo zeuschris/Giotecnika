@@ -20,8 +20,8 @@ export const CartProvider = ({children}) => {
     }
 
     const cartTotal = () => {
-        return cart.reduce((acc, item) =>  acc + item.cantidad * item.precio + item.envio, 0)
-    }
+      return cart.reduce((acc, item) =>  acc + item.cantidad * item.precio + parseInt(item.envio), 0)
+      }
 
 
     const removeItem = (id) => {

@@ -21,7 +21,6 @@ import './ItemDetail.scss'
                     precio : prod.price,
                     imagen : prod.img,
                     envio : prod.shipping,
-                    envioGratis : prod.shippingFree,
                     cantidad : cantidad
                 }
                 inCart(prod.id)
@@ -49,7 +48,7 @@ import './ItemDetail.scss'
                     <p>Garantia: {prod.warranty}</p>
                     <p>Stock: {prod.stock}</p>
                     <p className='talle'>{prod.talle ? `Talle: ${prod.talle}` : `Estuche: ${prod.case}`}</p>
-                    <p><span>{prod.shipping ? `Envio: $${prod.shipping}` : `Envio: ${prod.shippingFree}`}</span></p>
+                    <p><span>Envio: ${prod.shipping}</span></p>
                     <Link to='/' className="btn btn-warning back">Atras</Link>
 
                     {
