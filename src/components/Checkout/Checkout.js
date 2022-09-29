@@ -1,6 +1,12 @@
 import { useState } from "react"
+import { Navigate } from "react-router-dom"
+import { useCartContext } from "../../Context/CartContext"
+import { addDoc, collection } from 'firebase/firestore'
+import { db } from '../../firebase/fireconfig'
 
 export const Checkout = () => {
+
+    const {cart, cartTotal, endBuy} = useCartContext()
 
     const [values,setValues] = useState({
         nombre: '',
@@ -21,8 +27,8 @@ export const Checkout = () => {
 
             const orden = {
                 comprador: values,
-                items : '',
-                total : ''
+                items : cart,
+                total : cartTotal()
         }
 
             if (values.email.length < 5) {
@@ -41,6 +47,18 @@ export const Checkout = () => {
             }
 
             console.log(orden)
+
+            const ordenesRef = collection(db,'ordenes')
+
+            addDoc(ordenesRef, orden)
+                .then((doc) => {
+                    console.log(doc.id)
+                    endBuy(doc.id)
+                })
+    }
+
+    if (cart.length === 0) {
+        return <Navigate to="/"/>
     }
 
     return (

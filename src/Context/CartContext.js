@@ -22,18 +22,17 @@ export const CartProvider = ({children}) => {
     }
 
     const cartTotal = () => {
-      return cart.reduce((acc, item) =>  acc + item.cantidad * item.precio + parseInt(item.envio), 0)
-      }
-
+        return cart.reduce((acc, item) =>  acc + item.cantidad * item.precio + parseInt(item.envio), 0)
+    }
 
     const removeItem = (id) => {
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
               confirmButton: 'btn btn-success',
               cancelButton: 'btn btn-danger'
-            },
-            buttonsStyling: false
-        })
+          },
+        buttonsStyling: false
+    })
           
           swalWithBootstrapButtons.fire({
             title: 'Estas seguro?',
@@ -43,22 +42,21 @@ export const CartProvider = ({children}) => {
             confirmButtonText: 'Yes, delete it!',
             cancelButtonText: 'No, cancel!',
             reverseButtons: true
-          }).then((result) => {
-            if (result.isConfirmed) {
-              swalWithBootstrapButtons.fire(
-                  'Eliminado!',
-                  'Su producto ha sido eliminado.',
-                  'success',
-                  setCart(cart.filter((item) => item.id !== id))
-              )
-            } else if (
-
-              result.dismiss === Swal.DismissReason.cancel
+    }).then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire(
+              'Eliminado!',
+              'Su producto ha sido eliminado.',
+              'success',
+              setCart(cart.filter((item) => item.id !== id))
+            )
+    } else if (
+          result.dismiss === Swal.DismissReason.cancel
             ) {
-              swalWithBootstrapButtons.fire(
-                'Cancelado',
-                'Tu producto está a salvo :)',
-                'error'
+          swalWithBootstrapButtons.fire(
+              'Cancelado',
+              'Tu producto está a salvo :)',
+              'error'
             )
         }
     })
@@ -80,9 +78,20 @@ export const CartProvider = ({children}) => {
     })
 }
 
-  useEffect(() => {
-    localStorage.setItem('carrito', JSON.stringify(cart))
-  },[cart])
+    const endBuy = (id) => {
+        Swal.fire({
+            title: 'Se aprobo tu compra con exito!',
+            text: `El comprobante de orden es: ${id}`,
+            icon: 'success',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Ok'
+        })
+        setCart([])
+    }   
+
+    useEffect(() => {
+      localStorage.setItem('carrito', JSON.stringify(cart))
+},[cart])
 
     return (
         <CartContext.Provider value = {{
@@ -92,13 +101,14 @@ export const CartProvider = ({children}) => {
             cartQuantity,
             cartTotal,
             emptyCart,
-            removeItem
-          }}>
+            removeItem,
+            endBuy
+                                      }}>
             {children}
         </CartContext.Provider>
     )
 }
 
-export const useCartContext = () => {
-    return useContext(CartContext)
-}
+  export const useCartContext = () => {
+      return useContext(CartContext)
+  }
