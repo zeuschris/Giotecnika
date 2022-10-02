@@ -67,7 +67,7 @@ export const Header = () => {
                 <h1 className='main-title'>Productos</h1>
             </main>
             <div className='user-login'>
-                <h6>Bienvenido: {user.user}</h6>
+                <h5>Bienvenido {user.user}</h5>
                 <button onClick={logout} className='btn btn-primary'>Logout</button>
             </div>
         </header>

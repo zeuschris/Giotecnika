@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { LoginContext } from "../../Context/LoginContext"
 import { useContext } from "react"
+import image from '../../assets/logo.png';
+import './Login.scss'
 
 
 export const Login = () => {
@@ -28,6 +30,8 @@ export const Login = () => {
 
     return (
         <div className="container-login">
+            <h2>Iniciar Sesión</h2>
+            <img src={image} className='logo' alt='logo'/>
             <form className="container my-5" onSubmit={handleSubmit}>
 
                 <input
@@ -53,6 +57,7 @@ export const Login = () => {
                 />
 
                 <button className="btn btn-primary" type="submit">Entrar</button>
+                <button className="btn btn-primary mx-2" type="submit">Crear Cuenta</button>
             </form>
         </div>
     )
