@@ -24,9 +24,9 @@ export const Header = () => {
     return (
         <header className="header">
             <div>
-                <a href='/#' rel="noopener noreferrer">
+                <Link to='/' rel="noopener noreferrer">
                 <img src={image} className='logo' alt='logo'></img>
-                </a>
+                </Link>
             </div>
             <Navbar bg="dark" variant="dark" expand="lg" className="menu">
               <Container fluid>
@@ -37,7 +37,9 @@ export const Header = () => {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
                 >
-                <Nav.Link href="/#">Inicio</Nav.Link>
+                <Nav.Link>
+                  <Link to = '/'>Inicio</Link>
+                </Nav.Link>
                 <Nav.Link href="#action2">Contacto</Nav.Link>
                 <Dropdown wn='true' nav='true' isOpen={dropdownOpen} toggle={toggle}>
                 <DropdownToggle nav='true' caret='true' className='btn btn-dark categorias'>
@@ -67,7 +69,7 @@ export const Header = () => {
                 <h1 className='main-title'>Productos</h1>
             </main>
             <div className='user-login'>
-                <h5>Bienvenido {user.user}</h5>
+                <h5>Bienvenido: {user.user}</h5>
                 <button onClick={logout} className='btn btn-primary'>Logout</button>
             </div>
         </header>

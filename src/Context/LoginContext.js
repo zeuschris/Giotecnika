@@ -7,15 +7,15 @@ const users = [
     
     {
         email : 'admin@gmail.com',
-        password : '123456'
+        password : '1234567'
     },
 ]
 
 export const LoginProvider = ({children}) => {
 
     const [user, setUser] = useState({
-        user : '',
-        log : true,
+        user : 'admin@gmail.com',
+        log : false,
         error : ''
     })
 
