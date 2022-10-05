@@ -10,8 +10,6 @@ import './ItemDetail.scss'
         const [cantidad,setCantidad] = useState(1)
         const {cart, addCart, inCart} = useContext(CartContext)
 
-        console.log(cart)
-
         const handleCart = () => {
             if ( cantidad <= prod.stock ) {
                 

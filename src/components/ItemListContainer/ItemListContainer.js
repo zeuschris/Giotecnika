@@ -5,7 +5,6 @@ import ItemList from '../ItemList/ItemList'
 import { Navigate, useParams } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../../firebase/fireconfig'
-import { useLoginContext } from '../../Context/LoginContext'
 
 const ItemListContainer = () => {
 
@@ -25,7 +24,6 @@ useEffect(() => {
     getDocs(q)
         .then((resp) => {
             const productosDB = resp.docs.map((doc) => ({id : doc.id, ...doc.data()}))
-            console.log(productosDB)
             setStock(productosDB)
         })
         .finally(() => {
@@ -33,8 +31,6 @@ useEffect(() => {
         })
         
 }, [categoryID])
-
-    const {user} = useLoginContext()
 
     return (
 

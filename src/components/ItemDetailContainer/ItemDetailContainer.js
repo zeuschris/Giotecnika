@@ -15,9 +15,8 @@ import { db } from "../../firebase/fireconfig";
         useEffect(() => {
             setLoading(true)
             
-            // 1 - Armar la regerencia
             const docRef = doc(db, 'items', itemID)
-            // 2 - Llamar a la DB
+
             getDoc(docRef)
                 .then((doc) => {
                     setProduct({id: doc.id, ...doc.data()})

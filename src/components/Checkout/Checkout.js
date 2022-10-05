@@ -46,13 +46,10 @@ export const Checkout = () => {
                 return
             }
 
-            console.log(orden)
-
             const ordenesRef = collection(db,'ordenes')
 
             addDoc(ordenesRef, orden)
                 .then((doc) => {
-                    console.log(doc.id)
                     endBuy(doc.id)
                 })
     }

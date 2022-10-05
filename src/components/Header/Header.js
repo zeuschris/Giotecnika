@@ -1,6 +1,5 @@
 import image from '../../assets/logo.png';
 import './Header.scss'
-// Bootstrap 
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -12,12 +11,10 @@ import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { useLoginContext } from '../../Context/LoginContext';
 
 export const Header = () => {
 
      const [dropdownOpen, setDropdownOpen] = useState(false)
-     const {user,logout} = useLoginContext()
 
     const toggle = () => setDropdownOpen(!dropdownOpen)
 
@@ -37,11 +34,9 @@ export const Header = () => {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
                 >
-                <Nav.Link>
-                  <Link to = '/'>Inicio</Link>
-                </Nav.Link>
+                <Nav.Link href='/#'>Inicio</Nav.Link>
                 <Nav.Link href="#action2">Contacto</Nav.Link>
-                <Dropdown wn='true' nav='true' isOpen={dropdownOpen} toggle={toggle}>
+                <Dropdown wn='true' nav='true' isopen={dropdownOpen.toString()} toggle={toggle.toString()}>
                 <DropdownToggle nav='true' caret='true' className='btn btn-dark categorias'>
                 <span>Categorias</span>
                 </DropdownToggle>
@@ -68,10 +63,6 @@ export const Header = () => {
             <main>
                 <h1 className='main-title'>Productos</h1>
             </main>
-            <div className='user-login'>
-                <h5>Bienvenido: {user.user}</h5>
-                <button onClick={logout} className='btn btn-primary'>Logout</button>
-            </div>
         </header>
     )
 }

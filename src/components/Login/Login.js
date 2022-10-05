@@ -9,7 +9,6 @@ export const Login = () => {
 
     const [email, setEmail] = useState('')
     const {login, user} = useContext(LoginContext)
-    console.log(user)
     const [password, setPassword] = useState('')
 
     const handleEmailChange = (e) => {
