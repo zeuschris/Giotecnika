@@ -10,7 +10,7 @@
 1. Clone the repository
 
 ```sh
-git clone https://github.com/zeuschris/Tibia
+git clone https://github.com/zeuschris/Giotecnika
 ```
 
 2. Install dependencies
@@ -24,6 +24,6 @@ npm install
 npm start
 ```
 
-🎇Listo!
+### Interface
 
 ![](/gif/Interface.gif)
