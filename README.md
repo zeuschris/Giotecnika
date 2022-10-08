@@ -1,7 +1,7 @@
 # Giotecnika Web
 > 📌 Es una tienda ecommerce de una libreria para hacer compras online usando como base de datos firebase
 
-![](../Interface.gif)
+![](/gif/logo.gif)
 
 ## ✨Lenguajes y Frameworks Utilizados
 
