@@ -11,6 +11,21 @@ export const CartProvider = ({children}) => {
 
     const addCart = (prod) => {
         setCart ([...cart, prod])
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          Toast.fire({
+            icon: 'success',
+            title: `Se agrego ${prod.nombre} al carrito`
+          })
     }
 
     const inCart = (id) => {
