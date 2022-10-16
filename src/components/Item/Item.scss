@@ -1,9 +1,10 @@
 .container-lookme{
     display: flex;
     justify-content: center;
+    align-items: center;
     .lookme{
-        position: relative;
-        top: 40px;
+        position: absolute;
+        bottom: 70px;
         width: 50%;
     }
 }
