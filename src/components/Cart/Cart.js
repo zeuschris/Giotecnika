@@ -39,7 +39,7 @@ export const Cart = () => {
 
                     <h3>Total : ${cartTotal()}</h3>
                     <Link className="btn btn-primary me-2" to='/checkout'>Terminar mi compra</Link>
-                    <button onClick={emptyCart} className="btn btn-dark">Vaciar Carrito</button>
+                    {cart.length >= 2 ? <button onClick={emptyCart} className="btn btn-dark">Vaciar Carrito</button> : null}
                 </>
                 }
         </div>
