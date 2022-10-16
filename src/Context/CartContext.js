@@ -33,15 +33,14 @@ export const CartProvider = ({children}) => {
           },
         buttonsStyling: false
     })
-          
           swalWithBootstrapButtons.fire({
             title: 'Estas seguro?',
             text: "No podrás revertir esto!",
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonText: 'Yes, delete it!',
-            cancelButtonText: 'No, cancel!',
-            reverseButtons: true
+            confirmButtonText: 'Si, eliminar',
+            cancelButtonText: 'No, cancelar',
+            reverseButtons: false
     }).then((result) => {
         if (result.isConfirmed) {
           swalWithBootstrapButtons.fire(
