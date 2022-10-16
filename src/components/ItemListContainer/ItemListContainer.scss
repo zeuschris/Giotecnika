@@ -4,11 +4,8 @@
     flex-wrap: nowrap;
     justify-content: start;
     position: relative;
-    .main-title{
-        position: relative;
-        text-align: center;
-    }
 }
+
 .items{
     text-align: center;
     width: 300px;
@@ -68,6 +65,17 @@
 
 .swal2-confirm{
   margin: 7px;
+}
+
+.swal2-modal{
+  background-color: #000;
+  color: #fff;
+}  
+
+.swal2-icon-success{
+  .swal2-show{
+    background-color: #000;
+  }
 }
 
 .carousel-control-prev-icon{

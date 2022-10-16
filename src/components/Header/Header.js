@@ -60,9 +60,9 @@ export const Header = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-            <main>
-                <h1 className='main-title'>Productos</h1>
-            </main>
+      <main>
+        <h1>Productos</h1>
+      </main>
         </header>
     )
 }

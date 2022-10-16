@@ -45,18 +45,6 @@
     bottom:31px;
   }
 
-
-.main-title{
-  position:relative;
-  display: inline-block;
-  bottom: 80px;
-  font-size: 40px;
-  font-family: cursive;
-  font-weight: bolder;
-  color: 	#DAA520;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.742);
-}
-
 .categorias{
   span{
     text-transform: uppercase;
@@ -108,3 +96,4 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #313030;
 }
+
