@@ -5,7 +5,14 @@
     text-transform: uppercase;
     height: 200px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+    h1{
+      font-size: 50px;
+      font-family: 'Prompt', sans-serif;
+      color: #d9a114;
+    }
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,700&family=Prompt&display=swap');
 
   
 .menu{
@@ -68,6 +75,14 @@
   &:hover{
     color:#f3b20e;
   }
+}
+
+.nav-link{
+  font-family: 'Prompt', sans-serif;
+}
+
+span{
+  font-family: 'Prompt', sans-serif;
 }
 
 .menu-a{

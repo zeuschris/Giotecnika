@@ -34,8 +34,8 @@ export const Header = () => {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
                 >
-                <Nav.Link href='/#'>Inicio</Nav.Link>
-                <Nav.Link href="#action2">Contacto</Nav.Link>
+                <Nav.Link className='nav-link' href='/#'>Inicio</Nav.Link>
+                <Nav.Link className='nav-link' href="#action2">Contacto</Nav.Link>
                 <Dropdown wn='true' nav='true' isopen={dropdownOpen.toString()} toggle={toggle.toString()}>
                 <DropdownToggle nav='true' caret='true' className='btn btn-dark categorias'>
                 <span>Categorias</span>
@@ -46,7 +46,7 @@ export const Header = () => {
                 <DropdownItem enabled='true' className='menu-a'> <Link to='/productos/cuadros' className='link-a'>Cuadros</Link> </DropdownItem>
                 </DropdownMenu>
             </Dropdown>
-                <Nav.Link href="#">Nosotros</Nav.Link>
+                <Nav.Link className='nav-link' href="#">Nosotros</Nav.Link>
             </Nav>
               <Form className="d-flex">
               <Form.Control

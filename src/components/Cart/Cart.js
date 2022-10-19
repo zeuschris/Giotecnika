@@ -24,13 +24,13 @@ export const Cart = () => {
                 {
                         cart.map((item) =>(
                         <div key={item.id}>
-                        <h3>Nombre: {item.nombre}</h3>
+                        <h3>Producto: {item.nombre}</h3>
                         <img src={item.imagen} alt={item.nombre}/>
                         <p>Precio: ${item.precio}</p>
                         <p>Envio: ${item.envio}</p>
                         <small>Cantidad: {item.cantidad}</small>
                         <div>
-                        <button onClick={() => removeItem(item.id)} className="btn btn-danger my-3"><AiFillDelete/></button>
+                        <button onClick={() => removeItem(item.id)} className="btn btn-danger my-3 remove-item"><AiFillDelete/></button>
                         </div>
                         <hr/>
         </div>
