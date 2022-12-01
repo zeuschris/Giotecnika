@@ -24,7 +24,3 @@ npm install
 ```sh
 npm start
 ```
-
-## 🎆Interface
-
-![](/gif/Interface.gif)
