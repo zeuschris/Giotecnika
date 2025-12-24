@@ -1,68 +1,78 @@
-import image from '../../assets/logo.png';
-import './Header.scss'
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import DropdownToggle from 'react-bootstrap/esm/DropdownToggle';
-import { Dropdown } from 'react-bootstrap';
-import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
-import DropdownItem from 'react-bootstrap/esm/DropdownItem';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Navbar, Container, Nav, NavDropdown, Form, Button } from 'react-bootstrap';
+import image from '../../assets/logo.png';
+import './Header.scss';
 
 export const Header = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
-     const [dropdownOpen, setDropdownOpen] = useState(false)
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      navigate(`/buscar?q=${encodeURIComponent(searchTerm.trim())}`);
+      setSearchTerm('');
+    }
+  };
 
-    const toggle = () => setDropdownOpen(!dropdownOpen)
-
-    return (
-        <header className="header">
-            <div>
-                <Link to='/' rel="noopener noreferrer">
-                <img src={image} className='logo' alt='logo'></img>
-                </Link>
-            </div>
-            <Navbar bg="dark" variant="dark" expand="lg" className="menu">
-              <Container fluid>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
-                <Nav
-                className="me-auto my-2 my-lg-0"
-                style={{ maxHeight: '100px' }}
-                navbarScroll
-                >
-                <Nav.Link className='nav-link' href='/#'>Inicio</Nav.Link>
-                <Nav.Link className='nav-link' href="#action2">Contacto</Nav.Link>
-                <Dropdown wn='true' nav='true' isopen={dropdownOpen.toString()} toggle={toggle.toString()}>
-                <DropdownToggle nav='true' caret='true' className='btn btn-dark categorias'>
-                <span>Categorias</span>
-                </DropdownToggle>
-                <DropdownMenu>
-                <DropdownItem enabled='true' className='menu-a'> <Link to='/productos/boligrafos' className='link-a'>Boligrafos</Link> </DropdownItem>
-                <DropdownItem enabled='true' className='menu-a'> <Link to='/productos/mochilas' className='link-a'>Mochilas</Link> </DropdownItem>
-                <DropdownItem enabled='true' className='menu-a'> <Link to='/productos/cuadros' className='link-a'>Cuadros</Link> </DropdownItem>
-                </DropdownMenu>
-            </Dropdown>
-                <Nav.Link className='nav-link' href="#">Nosotros</Nav.Link>
+  return (
+    <header className="header-wrapper">
+      <div className="header-top">
+        <Container>
+          <Link to='/' className="logo-link">
+            <img src={image} className='logo' alt='Librería Giotecnika'/>
+          </Link>
+          <h1 className="header-title">Giotecnika</h1>
+        </Container>
+      </div>
+      
+      <Navbar bg="dark" variant="dark" expand="lg" className="header-navbar">
+        <Container>
+          <Navbar.Toggle aria-controls="navbar-nav" />
+          <Navbar.Collapse id="navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to='/'>
+                Inicio
+              </Nav.Link>
+              
+              <NavDropdown title="Categorías" id="categories-dropdown">
+                <NavDropdown.Item as={Link} to='/productos/boligrafos'>
+                  Bolígrafos
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to='/productos/mochilas'>
+                  Mochilas
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to='/productos/cuadros'>
+                  Cuadros
+                </NavDropdown.Item>
+              </NavDropdown>
+              
+              <Nav.Link as={Link} to='/nosotros'>
+                Nosotros
+              </Nav.Link>
+              
+              <Nav.Link as={Link} to='/contacto'>
+                Contacto
+              </Nav.Link>
             </Nav>
-              <Form className="d-flex">
+            
+            <Form className="d-flex" onSubmit={handleSearch}>
               <Form.Control
-              type="search"
-              placeholder="Buscar..."
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-warning">Search</Button>
-          </Form>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-      <main>
-        <h1>Productos</h1>
-      </main>
-        </header>
-    )
-}
+                type="search"
+                placeholder="Buscar productos..."
+                className="me-2"
+                aria-label="Buscar"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <Button variant="outline-warning" type="submit">
+                Buscar
+              </Button>
+            </Form>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </header>
+  );
+};
