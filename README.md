@@ -20,7 +20,7 @@
 ### Mobile
 ![Mobile](./screenshots/mobile-view.webp)
 
-[Demo en vivo](https://giotecnika.netlify.app)
+[Demo](https://giotecnika.netlify.app)
 
 </div>
 
@@ -270,11 +270,8 @@ firebase deploy
 - [ ] Panel de administración
 - [ ] Wishlist / Lista de deseos
 - [ ] Valoraciones y reseñas
-- [ ] Integración de pagos (Mercado Pago)
 - [ ] Notificaciones por email
 - [ ] Sistema de cupones/descuentos
-- [ ] Filtros avanzados
-- [ ] PWA (Progressive Web App)
 - [ ] Multi-idioma (i18n)
 
 ---
@@ -301,7 +298,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 **Christopher Montes**
 
-- 🌐 Website: [giotecnika](https://giotecnika.netlify.app)
+- 🌐 Website: [portfolio](https://portfolio-dev-chris.vercel.app)
 - 📍 Ubicación: Argentina
 
 ---
