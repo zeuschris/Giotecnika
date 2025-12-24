@@ -1,8 +1,3 @@
-# Giotecnika Web
-> 📌 Giotecnika is an ecommerce store of a bookstore to make online purchases of office products, using different technologies for its development
-
-## 🚀 Lenguages and Frameworks used
-=======
 # 🛒 Giotecnika - E-commerce
 
 <div align="center">
@@ -13,6 +8,17 @@
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.2-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 **E-commerce moderno y responsivo con React, Vite, Firebase y Dark Mode**
+
+## 📸 Screenshots
+
+### Light Mode
+![Light Mode](./screenshots/light-mode.webp)
+
+### Dark Mode
+![Dark Mode](./screenshots/dark-mode.webp)
+
+### Mobile
+![Mobile](./screenshots/mobile-view.webp)
 
 [Demo en vivo](https://giotecnika.netlify.app)
 
@@ -297,19 +303,6 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 - 🌐 Website: [giotecnika](https://giotecnika.netlify.app)
 - 📍 Ubicación: Argentina
-
----
-
-## 📸 Screenshots
-
-### Light Mode
-![Light Mode](./screenshots/light-mode.png)
-
-### Dark Mode
-![Dark Mode](./screenshots/dark-mode.png)
-
-### Mobile
-![Mobile](./screenshots/mobile-view.png)
 
 ---
 
